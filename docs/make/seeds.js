@@ -26,7 +26,7 @@ const makeSeed = () =>
 const { User, Message } = require('../models');
 require('dotenv').config();
 const userData = require('./userData.json');
-const msgData = require('./msg.json');
+const msgData = require('./messagesData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });

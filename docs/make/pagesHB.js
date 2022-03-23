@@ -130,25 +130,23 @@ const makePage3 = () =>
 `;
 
 const makeHomepage = () => 
-`<nav class="navbar navbar-expand-lg navbar-light bg-light">
-<div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-            <a class="nav-link" href="/page1">Page 1</a>
-            <a class="nav-link" href="/page2">Page 2</a>
-            {{#if logged_in}}
-            <a class="nav-link" href="/page3">Page 3</a>
-            {{/if}}
-        </div>
+`<div class="container">
+<div class="row">
+  <div class="col">
+    <div class="card" style="width: 18rem;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">HOMEPAGE</li>
+        <li class="list-group-item">Its an pageroo</li>
+        <li class="list-group-item">howdy</li>
+      </ul>
+      <div class="card-footer">
+        Card footer
+      </div>
     </div>
+  </div>
+  </div>
 </div>
-</nav>
+</div>
 `;
 
 const makeLogin = () => 

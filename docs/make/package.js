@@ -7,7 +7,7 @@ const package = () =>
     "description": "",
     "main": "server.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
+      "test": "echo \\\"Error: no test specified\\\" && exit 1",
       "start": "node seeds/seed.js && node server.js",
       "seed": "node seeds/seed.js"
     },

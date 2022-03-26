@@ -1,10 +1,4 @@
-# MVC_Project_Template
-A node.js application where, when run from the command line will create a directory for a boiler-plate Project using the Model View Controller paradigm
-
-
-
-
-# MVC_Project_Template ![License: giraffe](https://img.shields.io/badge/License-giraffe-yellow.svg)
+# MVC_Project_Template ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
   ## Description
 

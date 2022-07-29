@@ -21,7 +21,9 @@ const withAuth = require('../utils/auth');
 
 
 router.get('/', async (req, res) => {
-  res.render('homepage')
+  res.render('homepage', {
+    logged_in: req.session.logged_in
+  })
 })
 router.get('/page1', async (req, res) => {
   try {
@@ -29,14 +31,19 @@ router.get('/page1', async (req, res) => {
     const allMessages = await Message.findAll();
     const messages = allMessages.map((message) => message.get({plain: true}));
 
-    res.render('page1', {messages})
+    res.render('page1', {
+      messages,
+      logged_in: req.session.logged_in
+    })
   } catch {
     res.status(500);
   }
   
 })
 router.get('/page2', async (req, res) => {
-  res.render('page2')
+  res.render('page2',{
+    logged_in: req.session.logged_in
+  })
 })
 
 router.get('/page3', withAuth, async (req, res) => {
@@ -54,7 +61,7 @@ router.get('/page3', withAuth, async (req, res) => {
 router.get('/login', (req, res) => {
     // If a session exists, redirect the request to the homepage
     if (req.session.logged_in) {
-      res.redirect('/page3');
+      res.redirect('/');
       return;
     }
   
